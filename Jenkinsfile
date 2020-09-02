@@ -10,7 +10,7 @@ node('master')
     }
     stage('ContinuousDeployment')
     {
-        sh label: '', script: 'scp /home/robin/.jenkins/workspace/Development/webapp/target/webapp.war robin@192.168.0.111:/home/robin/tomcat9/webapps/qa_jenkins3.war'
+        sh label: '', script: 'scp /home/robin/.jenkins/workspace/Development/webapp/target/webapp.war robin@192.168.0.111:/home/robin/tomcat9/webapps/qa_jenkins4.war'
     }
     stage('ContinuousTesting')
     {
@@ -19,6 +19,6 @@ node('master')
     }
      stage('ContinuousDelivery')
     {
-        sh label: '', script: 'scp /home/robin/.jenkins/workspace/Development/webapp/target/webapp.war robin@192.168.0.112:/home/robin/tomcat9/webapps/prod_jenkins3.war'
+        sh label: '', script: 'scp /home/robin/.jenkins/workspace/Development/webapp/target/webapp.war robin@192.168.0.112:/home/robin/tomcat9/webapps/prod_jenkins4.war'
     }
 }
